@@ -1,0 +1,171 @@
+body {
+  background-color: #EfEFEFEF;
+}
+button {
+  padding: 3em;
+  font-size: 1em;
+}
+.footer {
+  padding-top: 60vh;
+}
+.logo {
+  width: 4.5em;
+}
+.conent {
+  background-color: #F8F9FA;
+}
+.ad {
+  max-width: 10em;
+  width: 5em;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.answers {
+  margin: 0.5em;
+
+}
+.url {
+  max-width: 15em;
+}
+
+.form-control {
+  margin-bottom: 1.5em;
+}
+.cookiealert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 !important;
+    z-index: 999;
+    opacity: 0;
+    border-radius: 0;
+    transform: translateY(100%);
+    transition: all 500ms ease-out;
+    background-color: #875a34;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234b261b' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.cookiealert.show {
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 1000ms;
+}
+
+.cookiealert a {
+    text-decoration: underline
+}
+
+.cookiealert .acceptcookies {
+    margin-left: 10px;
+    vertical-align: baseline;
+    border: none;
+}
+.jumbotron {
+  background-color: #FFFFFF;
+}
+.container {
+}
+
+.inhalt {
+  width: 100%;
+  background-color: #F8F9FA;
+}
+.contentsmall {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.smalltext {
+  font-size: 2em;
+}
+.float {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 2em;
+  margin-bottom: 2em;
+  opacity: 1;
+  transition: opacity 0.3s; /* 600ms to fade out */
+}
+.header {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 5em;
+  background-color: white;
+  padding: 2em;
+  padding-bottom: 4em;
+  color: white;
+  box-shadow: 0px 10px 8px #888888;
+}
+.hright {
+  position: absolute;
+  padding-bottom: 0.5em;
+  right: 0;
+  margin-right: 3em;
+  display: block;
+  vertical-align: middle;
+}
+.header a {
+  float: left;
+  text-decoration: none;
+  color: black;
+}
+.brand {
+  font-size: 3em;
+  line-height: 0em;
+}
+.brandtop {
+  padding-left: 1.6em;
+  font-size: 1em;
+  line-height: 2em;
+}
+.quizcreate {
+  float: right;
+  margin-top: 0px;
+  padding: 0.7em;
+  background-color: #1699e5;
+  border-radius: 0.5em;
+  color: white;
+  border: 0.2em none transparent;
+  box-shadow: 0.06em 0.06em 0.06em #888888;
+}
+.quizcreate:hover {
+  background-color: #1287cc;
+  box-shadow: 0.1em 0.1em 0.1em #888888;
+}
+.quizcreate:active {
+  background-color: #1687e2;
+  box-shadow: 0.2em 0.2em 0.2em #888888;
+}
+.myquiz {
+  float: right;
+  margin-top: 0px;
+  padding: 0.7em;
+  background-color: #2cdd5e;
+  border-radius: 0.5em;
+  color: white;
+  border: 0.2em none transparent;
+  box-shadow: 0.06em 0.06em 0.06em #888888;
+}
+.myquiz:hover {
+  background-color: #23c64f;
+  box-shadow: 0.1em 0.1em 0.1em #888888;
+}
+.myquiz:active {
+  background-color: #14bc41;
+  box-shadow: 0.2em 0.2em 0.2em #888888;
+}

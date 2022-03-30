@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block content %}
+<script>
+	var isValidIsbn = function (str) {
+		var sum, weight, digit, check, i;
+
+		str = str.replace(/[^0-9X]/gi, "");
+
+		if (str.length != 10 && str.length != 13) {
+			return false;
+		}
+
+		if (str.length == 13) {
+			sum = 0;
+			for (i = 0; i < 12; i++) {
+				digit = parseInt(str[i]);
+				if (i % 2 == 1) {
+					sum += 3 * digit;
+				} else {
+					sum += digit;
+				}
+			}
+			check = (10 - (sum % 10)) % 10;
+			return check == str[str.length - 1];
+		}
+
+		if (str.length == 10) {
+			weight = 10;
+			sum = 0;
+			for (i = 0; i < 9; i++) {
+				digit = parseInt(str[i]);
+				sum += weight * digit;
+				weight--;
+			}
+			check = (11 - (sum % 11)) % 11;
+			if (check == 10) {
+				check = "X";
+			}
+			return check == str[str.length - 1].toUpperCase();
+		}
+	};
+	$(document).ready(function () {
+		$("#psubmit").hide();
+		$("#isbn").on("input", function () {
+			// Print entered value in a div box
+			text = $(this).val();
+			if (isValidIsbn(text)) {
+				$("#isbn_valid").text("Gültig").css("color", "green");
+				$("#psubmit").show();
+			} else {
+				$("#isbn_valid").text("Ungültig").css("color", "red");
+				$("#psubmit").hide();
+			}
+		});
+	});
+</script>
+<main role="main">
+	<div class="content flex-shrink-0">
+		<section class="jumbotron text-center">
+			<div class="container">
+				<p class="lead text-muted">Neues Buch hinzufügen</p>
+				<form action="" method="post" novalidate>
+					{{ form.hidden_tag() }}
+					<p>{{form.isbn.label}} {{form.isbn()}}</p>
+					<p id="isbn_valid"></p>
+					{% for error in form.isbn.errors %}
+					<span style="color: red">[{{ error }}]</span>
+					{% endfor %}
+					<p id="psubmit">{{form.submit() }}</p>
+				</form>
+			</div>
+		</section>
+	</div>
+</main>
+{% endblock %}

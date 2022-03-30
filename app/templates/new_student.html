@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main role="main">
+  <div class="content flex-shrink-0">
+  <section class="jumbotron text-center">
+  <div class="container">
+    <p class="lead text-muted">Neuen Schüler hinzufügen</p>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{form.first_name.label}} <br>
+            {{form.first_name()}}
+        </p>
+        <p>
+            {{form.last_name.label}}<br>
+            {{form.last_name()}}
+        </p>
+        <p>
+            {{form.email.label}}<br>
+            {{form.email()}}
+        </p>
+        <p>
+            {{form.phone_number.label}}<br>
+            {{form.phone_number()}}
+        </p>
+        <p>
+            {{form.tutor.label}}<br>
+            {{form.tutor()}}
+        </p>
+        <p>
+            {{form.submit() }}
+        </p>
+    </form>
+  </div>
+</section>
+</div>
+</main>
+{% endblock %}
